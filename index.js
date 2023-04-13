@@ -6,7 +6,7 @@ const app = express()
 app.use(express.json())
 app.use(bodyparser.json())
 const port = 5000
-mongoose.connect("mongodb://localhost:27017/mydb").then((res)=>{
+mongoose.connect("mongodb+srv://chhatrapati:mandwe@cluster0.mwzmddi.mongodb.net/?retryWrites=true&w=majority").then((res)=>{
     console.log("connected db")
 })
 app.use("/", product_router)
